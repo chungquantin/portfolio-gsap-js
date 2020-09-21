@@ -81,7 +81,7 @@ section {
 	color: rgba(255, 255, 255, 0.11);
 	margin: 0 auto;
 	letter-spacing: 0.15em;
-	animation: typing 2s steps(5000, end);
+	animation: typing 1.3s steps(5000, end);
 	font-size: 20px;
 	word-break: break-all;
 }
@@ -414,19 +414,7 @@ canvas {
 				font-size: 40px;
 			}
 		}
-	}
-	
-	.video-card{
-		height: 200px;
-		width: 300px;
-		background-color:red;
-	}
-
-	.carousel-cell {
-		width: 90%;
-	}
-		
-	  
+	} 
 	
 	.project-detail{
 		position: absolute;
@@ -460,5 +448,39 @@ canvas {
 		margin: 0px auto;
 		font-family: $Poppins;
 		font-size: 18px;
+	}
+}
+
+
+.carousel-cell {
+	width: 300px;
+	height: 200px;
+	background-color:red;
+	margin: 10px;
+}
+.project-image{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.action-area{
+	position: absolute;
+	z-index: 1000;
+	bottom:0;
+	right: 0;
+	margin: 0px auto;
+	grid-row: auto auto;
+	button{
+		&:first-child{
+			margin: 5px 3px 5px 5px;
+		}
+		&:last-child{
+			margin: 5px 3px 5px 5px;
+		}
+		width: 55px;
+		height: 55px;
+		border-radius: 50px;
+		background-color: rgba(0, 0, 0, 0.911);
 	}
 }

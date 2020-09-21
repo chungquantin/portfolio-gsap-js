@@ -61,4 +61,4 @@ function animate() {
 	requestAnimationFrame(animate);
 }
 
-init();
+$(window).load(init());

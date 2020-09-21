@@ -1,11 +1,13 @@
-const animeTl = anime.timeline({});
+const animeTl = anime.timeline({
+	duration: 750
+});
 const gsapTl = gsap.timeline({});
 function mainTimeline() {
 	animeTl
 		.add({
 			targets: ".square",
 			opacity: 1,
-			duration: 500,
+			duration: 700,
 			delay: anime.stagger(300, { grid: [5, 3], from: "center" }),
 		})
 		.add(
@@ -97,11 +99,7 @@ function openSection(e) {
 			break;
 	}
 	tl.to(`.${e.id}-page`, { display: displayMode }, "open")
-		.to(".widget-area", { y: 0 }, "open").to(".home-page",{
-			onbegin: () => {
-				// document.querySelector(".home-page").style.filter = "blur(3px)"
-			}
-		},"open").to([".heading",".nav-area"],{opacity: 0},"open");
+		.to(".widget-area", { y: 0 }, "open").to([".heading",".nav-area"],{opacity: 0},"open").to([".heading",".nav-area"],{display: "none"},"open");
 	document.querySelector(".back-btn").id = e.id;
 	document.querySelector(".nav-btn").id = e.id;
 }
@@ -115,7 +113,7 @@ function openContact(timeline, id){
 	)
 }
 function openProject(timeline, id){
-	timeline.to(`.${id}-display`,{y:"-100vh", duration:1, ease: "power1.out"},"open");
+	timeline.to(`.${id}-display`,{y:"-100vh", duration:1.5, ease: "power1.out"},"open").fromTo(`.${id}-card`,{opacity: 0},{delay:0.7,opacity: 1, stagger: 0.2, duration: 0.5, ease: "linear"},"open");
 }
 
 function closeSection(e) {
@@ -130,12 +128,8 @@ function closeSection(e) {
 	  	default:
 			break;
 	}
-	tl.to(`.${e.id}-page`, { display: "none" })
-		.to(".widget-area", { y: -100 }, "close").to(".home-page",{
-			onbegin: () => {
-				// document.querySelector(".home-page").style.filter = "blur(0px)"
-			}
-		},"close").to([".heading",".nav-area"],{opacity: 1},"close");;
+	tl
+		.to(".widget-area", { y: -100 }, "close").to(".nav-area",{display: "flex"},"close").to(".heading",{display: "block"},"close").to([".heading",".nav-area"],{opacity: 1},"close");
 }
 
 function closeContact(timeline, id){
@@ -144,11 +138,12 @@ function closeContact(timeline, id){
 		{ y: "-100vh" },
 		{ y: "0vh", stagger: 0.3, duration: 1, ease: "power1.out" },
 		"close"
-	)
+	).to(`.${id}-page`, { display: "none" });
 }
 function closeProject(timeline,id){
-	timeline.to(`.${id}-display`,{y:"100vh", duration: 1, ease: "power1.out"},"close");
+	timeline.to(`.${id}-display`,{y:"100vh", duration: 1.5, ease: "power2.out"},"close");
 }
 
 mainTimeline();
+
 //TODO 3d cube

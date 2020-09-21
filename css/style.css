@@ -104,8 +104,8 @@ section.home-page {
   color: rgba(255, 255, 255, 0.11);
   margin: 0 auto;
   letter-spacing: 0.15em;
-  -webkit-animation: typing 2s steps(5000, end);
-          animation: typing 2s steps(5000, end);
+  -webkit-animation: typing 1.3s steps(5000, end);
+          animation: typing 1.3s steps(5000, end);
   font-size: 20px;
   word-break: break-all;
 }
@@ -588,16 +588,6 @@ canvas {
   font-size: 40px;
 }
 
-.project-display .video-card {
-  height: 200px;
-  width: 300px;
-  background-color: red;
-}
-
-.project-display .carousel-cell {
-  width: 90%;
-}
-
 .project-display .project-detail {
   position: absolute;
   z-index: 3;
@@ -646,5 +636,49 @@ canvas {
   margin: 0px auto;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
+}
+
+.carousel-cell {
+  width: 300px;
+  height: 200px;
+  background-color: red;
+  margin: 10px;
+}
+
+.project-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.action-area {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  right: 0;
+  margin: 0px auto;
+  grid-row: auto auto;
+}
+
+.action-area button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.911);
+}
+
+.action-area button:first-child {
+  margin: 5px 3px 5px 5px;
+}
+
+.action-area button:last-child {
+  margin: 5px 3px 5px 5px;
 }
 /*# sourceMappingURL=style.css.map */
