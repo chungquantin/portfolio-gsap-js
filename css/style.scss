@@ -1,0 +1,464 @@
+$Poppins: "Poppins", sans-serif;
+$AbrilFatface: "Abril Fatface", cursive;
+$LexendPeta: "Lexend Peta", sans-serif;
+$Code: "Source Code Pro", monospace;
+$Doodle: "Permanent Marker", cursive;
+$Raleway: "Raleway", sans-serif;
+
+* {
+	margin: 0;
+	padding: 0;
+	user-select: none;
+	&::marker {
+		display: none;
+	}
+	color: white;
+}
+$mainColor: black;
+body {
+	background-color: $mainColor;
+	overflow: hidden;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+section {
+	min-height: 100vh;
+	&.home-page {
+		background-color: $mainColor;
+	}
+}
+
+.loading-page {
+	overflow: hidden;
+	font-family: $LexendPeta;
+	font-weight: bold;
+	ul {
+		list-style-type: none;
+		li {
+			overflow: visible;
+			.square-area {
+				z-index: 999;
+				display: flex;
+				overflow: visible;
+				width: 380px;
+				flex-wrap: wrap;
+				padding-left: 16px;
+				.square {
+					opacity: 0;
+					width: 70px;
+					height: 70px;
+					margin: 3px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					color: rgb(255, 255, 255);
+					background-color: rgb(22, 22, 22);
+					&.white {
+						background-color: rgb(255, 255, 255);
+						color: $mainColor;
+					}
+				}
+			}
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			color: rgb(255, 255, 255);
+			min-height: 33.4vh;
+			background-color: $mainColor;
+		}
+	}
+}
+
+.typewriter h1 {
+	font-family: $Code;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	color: rgba(255, 255, 255, 0.11);
+	margin: 0 auto;
+	letter-spacing: 0.15em;
+	animation: typing 2s steps(5000, end);
+	font-size: 20px;
+	word-break: break-all;
+}
+
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes typing2 {
+	from {
+		width: 0;
+	}
+	to {
+		width: 40%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: white;
+	}
+}
+
+.typewritingEffect h1 {
+	opacity: 0;
+	width: fit-content;
+	font-size: 23px;
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+	border-right: 0.15em solid white; /* The typwriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	animation-delay: 7s;
+	animation: typing2 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.heading {
+	opacity: 0;
+	font-family: $LexendPeta;
+	text-transform: uppercase;
+	font-size: 30px;
+}
+
+.home-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.heading {
+	overflow: visible;
+}
+.heading-name {
+	margin-top: 10px;
+}
+
+.svg-path {
+	path {
+		stroke-dasharray: 5000;
+		stroke-dashoffset: 0;
+		stroke-opacity: 0.6;
+	}
+}
+
+.nav-area {
+	cursor: pointer;
+	display: flex;
+	margin-top: 100px;
+	div {
+		margin: 0px 50px;
+		font-family: $Poppins;
+		letter-spacing: 1px;
+	}
+}
+
+.contact-page {
+	position: relative;
+	display: none;
+	$contact-page-color: white;
+	padding: 0;
+	ul {
+		display: grid;
+		margin: 0;
+		grid-template-columns: 67% 33%;
+		@media (max-width: 1024px){
+			display: block;
+		}
+		li {
+			overflow: hidden;
+			height: 100vh;
+			background-color: $contact-page-color;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+}
+
+button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+	&.widget {
+		i {
+			mix-blend-mode: difference;
+			font-size: 20px;
+		}
+		padding: 20px;
+	}
+}
+.widget-area {
+	top: 0;
+	margin: 0px auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+}
+
+.info-heading {
+	color: black;
+	font-size: 35px;
+	margin: 0px 0px 30px 0px;
+	width: fit-content;
+	font-family: $Raleway;
+	font-weight: bold;
+}
+
+.info-p {
+	margin: 0px 0px 30px 0px;
+	color: black;
+	font-style: italic;
+	font-size: 1rem;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-method {
+	table{
+		margin: 20px;
+		.method{
+			td{
+				padding: 20px 30px 10px 0px ;
+			}
+			td:last-child {
+				color: black;
+				font-family: $Code;
+				font-size: larger;
+			}
+		}
+	}
+	i {
+		color: black;
+		margin: 0px 30px;
+		cursor: pointer;
+		font-size: 2.2rem;
+		display: flex;
+		flex-direction:column;
+		transition: color 0.3s ease-in;
+		&:hover {
+			transition: color 0.3s ease-out;
+			&#facebook {
+				color: #385998;
+			}
+			&#linkedin {
+				color: #0e76a8;
+			}
+			&#hackerrank {
+				color: #00e361;
+			}
+			&#instagram {
+				color: #ff5a60;
+			}
+			&#mail {
+				color: #016dbf;
+			}
+			&#github {
+			}
+		}
+	}
+}
+
+.info-area {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	bottom: 50px;
+	width: 100%;
+	.image-heading {
+		color: white;
+		font-size: 27px;
+		font-family: $Raleway;
+		margin: 5px;
+	}
+	.image-descript {
+		text-transform: uppercase;
+		font-family: $LexendPeta;
+		font-size: smaller;
+	}
+}
+
+.button-area {
+	margin: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	button {
+		margin: 0px auto;
+		width: fit-content;
+		padding: 15px 50px;
+		border: 1px solid black;
+		span {
+			color: black;
+			font-size:1rem;
+			font-family: $Poppins;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+		}
+		&:hover {
+			span {
+				color: white;
+			}
+			background-color: black;
+		}
+		margin: 20px;
+	}
+	//TODO technical function
+}
+
+.nav-pos-area {
+	display: flex;
+	top: 0;
+	left: 0;
+	margin: 8px 20px;
+	font-family: $Poppins;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	.nav-pos {
+		width: 30px;
+		height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 100px;
+		margin: 10px;
+		border: 1.5px solid white;
+	}
+}
+
+canvas {
+	position: absolute;
+}
+//TODO responsiveness refactoring
+
+.contact-form{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	height: 60%;
+}
+.project-page{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.project-display{
+	// margin: 0px auto;
+	width: 1400px;
+	height: 700px;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-row: repeat(2,1fr);
+	.project-card{
+		margin: 10px;
+		background-color: red;
+		position: relative;
+		overflow: hidden;
+		&:last-child{
+			background-color:transparent;
+			grid-row: 1/3;
+			grid-column: 3/5;
+		}
+		.project-image{
+			width: 100%;
+			height: 100%;
+			filter: brightness(90%);
+			background-position: center;
+			background-size: cover;
+		}
+		&#fleg{
+			height: 330px;
+			.project-image{
+				background-image: url('../img/fleg.jpg');
+			}
+		}
+		&#dakonet{
+			height: 330px;
+			.project-image{
+				background-position-y: 20px;;
+				background-image: url('../img/dakonet.png');
+			}
+		}
+		&#edit{
+			grid-column: 1/3;
+			background-color: transparent;
+			.edit-heading{
+				width: fit-content;
+				margin: 20px auto;
+				font-family: $Raleway;
+				font-size: 40px;
+			}
+		}
+	}
+	
+	.video-card{
+		height: 200px;
+		width: 300px;
+		background-color:red;
+	}
+
+	.carousel-cell {
+		width: 90%;
+	}
+		
+	  
+	
+	.project-detail{
+		position: absolute;
+		z-index: 3;
+		width: 100%;
+		background-color: rgb(24, 24, 24);
+		padding: 10px;
+		height: fit-content;
+		h2{
+			font-family: $Raleway;
+			margin: 2px 0px;
+		}
+		p{
+			font-family: $Poppins;
+		}
+	}
+}
+.project-heading{
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	height: 50%;
+	justify-content: center;
+	h1{
+		margin: 5px auto;
+		font-family: $Raleway;
+		font-size: 68px;
+	}
+	.description{
+		margin: 0px auto;
+		font-family: $Poppins;
+		font-size: 18px;
+	}
+}
