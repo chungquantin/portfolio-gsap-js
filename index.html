@@ -55,6 +55,41 @@
 		
 	</head>
 	<body>
+		<div class="nav-bar">
+			<div class="nav">
+				<div class="widget-area">
+					<button class="widget back-btn" onclick="closeSection(this)">
+						<i class="fa fa-home" aria-hidden="true"></i>
+					</button>
+					<button class="widget nav-btn">
+						<i class="fa fa-bars" aria-hidden="true"></i>
+					</button>
+				</div>
+				<div class="icon-area">
+					<div class="icon-container">
+						<div>
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+						</div>
+						<div>
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</div>
+						<div>
+							<i class="fa fa-github" aria-hidden="true"></i>
+						</div>
+						<div>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</div>
+						<div>
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</div>
+						<div>
+							<i class="fa fa-youtube" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<section class="loading-page">
 			<ul>
 				<li></li>
@@ -129,19 +164,8 @@
 				</h1>
 			</div>
 		</section>
-		<div class="widget-area">
-			<button class="widget back-btn" onclick="closeSection(this)">
-				<i class="fa fa-home" aria-hidden="true"></i>
-			</button>
-			<button class="widget nav-btn">
-				<i class="fa fa-bars" aria-hidden="true"></i>
-			</button>
-		</div>
-		<div class="hire-area">
-			<button class="hire-button">
-				<span>Hire me</span>
-			</button>
-		</div>
+		
+		
 		<section class="home-page" style="background-color: none">
 			<h1 class="heading" style="z-index: 1">
 				<div id="heading-span">
@@ -197,11 +221,11 @@
 				</div>
 			</h1>
 			<div class="nav-area" style="z-index: 1">
-				<div class="nav-btn" onclick="openSection(this)" id="tech">
+				<div class="nav-btn" onclick="openSection(this)" id="about">
 					About
 				</div>
-				<div class="nav-btn" onclick="openSection(this)" id="contact">
-					Contact
+				<div class="nav-btn" onclick="openSection(this)" id="tech">
+					Technology
 				</div>
 				<div class="nav-btn" onclick="openSection(this)" id="project">
 					Project
@@ -214,15 +238,15 @@
 		<section
 			class="about-page"
 			id="about-page"
-			style="display:none"
+			style="display: none;"
 		>	
 		<div class="profile-intro">
 			<div class="profile-image">
-				<img src="./img/logo-javascript-logo-black-and-white.png" alt="My image">
+				<img src="./img/IMG_0180.JPG" alt="My image">
 			</div>
 			<div class="profile-content">
 				<div class="profile-greeting">
-					Hi, I'm Chase Chung from Viet Nam!
+					<div class="letters">Hi, I'm Chase from Viet Nam!</div>
 				</div>
 				<div class="profile-description">
 					You can call me a freelancer, a coder, a programmer...But sum all of it, my only responsiblity is bringing your idea into real life. Web development has grown exponentially in any industry. There are comparisons between a business without a website and the one with the website. And the outcome totally leans on the technology. And personally, I think web development is having a lot of potentials. So if you need to create a portfolio,a responsive website, a business ecommerce website or a PWA (Progressive Web Apps), send me a message!
@@ -303,65 +327,28 @@
 		</div>
 		</section>
 		<section
-			class="contact-page"
-			id="contact-page"
-			style="background-color: white"
+			class="tech-page"
+			id="tech-page"
 		>
-			<ul id="contact-ul" style="list-style-type: none; z-index: 3">
-				
-				<li style="background-color: transparent; z-index: 3;">
-					<img
-						src="https://i.pinimg.com/originals/28/b2/51/28b25131556209808f8fc8c740a051ca.jpg"
-						alt="Portrait Black White"
-					/>
-					<div class="info-area" style="position: absolute; z-index: 2">
-						<h2 class="image-heading">Chung Quan Tin</h2>
-						<span class="image-descript"> A tech enthusiast </span>
+			<div class="tech-dashboard">
+				<div class="tech-heading">
+					My technical skills
+				</div>
+				<div class="tech-frontend">
+					<div class="tech-card">
+
 					</div>
-				</li>
-				<li style="padding: 50px">
-					<h1 class="info-heading">Get in touch!</h1>
-					<!-- <p class="info-p">
-						&nbsp; Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-						Adipisci impedit rem beatae! Ut architecto quos in suscipit laborum;
-					</p> -->
-					<div class="contact-method">
-						<table class="table">
-							<tbody>
-								<tr class="method">
-									<td scope="row"><i class="fa fa-envelope" id="mail" aria-hidden="true"></i></td>
-									<td>Gmail</td>
-								</tr>
-								<tr class="method">
-									<td scope="row"><i class="fa fa-github" id="github" aria-hidden="true"></i></td>
-									<td>Github</td>
-								</tr>
-								<tr class="method">
-									<td scope="row"><i class="fab fa-hackerrank" id="hackerrank"></i></td>
-									<td>Hackerrank</td>
-								</tr>
-								<tr class="method">
-									<td scope="row"><i class="fa fa-linkedin" id="linkedin" aria-hidden="true"></i></td>
-									<td>Linkedin</td>
-								</tr>
-								<tr class="method">
-									<td scope="row"><i class="fa fa-facebook" id="facebook" aria-hidden="true"></i></td>
-									<td>Facebook</td>
-								</tr>
-								<tr class="method">
-									<td scope="row"><i class="fa fa-instagram" id="instagram" aria-hidden="true"></i></td>
-									<td>Instagram</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="button-area">
-							<button class="send-button">
-								<span>Send me a message</span>
-							</button>
-						</div>
-					</div>
-				</li>
-			</ul>
+					<div class="tech-card"></div>
+				</div>
+				<div class="tech-backend">
+					<div class="tech-card"></div>
+					<div class="tech-card"></div>
+				</div>
+				<div class="tech-other">
+					<div class="tech-card"></div>
+					<div class="tech-card"></div>
+				</div>
+			</div>
 		</section>
 		<section
 			class="project-page"
@@ -422,7 +409,7 @@
 				</div>
 				<div class="project-card" id="edit">
 					<div class="edit-heading">
-						Video editting
+						Video editing
 					</div>
 					<div class="main-carousel">
 						<div class="carousel-cell" data-flickity>

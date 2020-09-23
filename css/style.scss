@@ -16,6 +16,51 @@ $Raleway: "Raleway", sans-serif;
 }
 $mainColor: black;
 body {
+	.nav-bar{
+		padding: 50px 0px;
+		display: flex;
+		flex-direction: column;
+		width: 80px;
+		height: 100vh;
+		background-color: rgb(8, 8, 8);
+		position: fixed;
+		right: 0;
+		z-index: 2000;
+		.icon-area{
+			.icon-container{
+				margin: 0px auto;
+				height: fit-content;
+				width: fit-content;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				div{
+					width:42px;
+					height: 42px;
+					border-radius: 50px;
+					justify-content: center;
+					display: flex;
+					flex-direction: column;
+					font-size: 20px;
+					background-color: rgb(27, 27, 27);
+					margin: 10px 10px;
+					i{
+						opacity: 0.5;
+						margin: 0px auto;
+						mix-blend-mode: difference;
+					}
+					&:hover{
+						box-shadow: 0px 0px 15px white;
+						cursor: pointer;
+						background-color: white;
+						i{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
 	background-color: $mainColor;
 	overflow: auto;
 	scrollbar-width: none;
@@ -25,6 +70,7 @@ body {
 	@media (max-width: 1024px){
 		overflow: scroll;
 	}
+	
 }
 section {
 	min-height: 100vh;
@@ -175,31 +221,6 @@ section {
 	}
 }
 
-.contact-page {
-	position: relative;
-	display: none;
-	$contact-page-color: white;
-	padding: 0;
-	z-index: 1002;
-	ul {
-		display: grid;
-		margin: 0;
-		grid-template-columns: 67% 33%;
-		@media (max-width: 1024px){
-			display: block;
-		}
-		li {
-			overflow: hidden;
-			height: 100vh;
-			background-color: $contact-page-color;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-	}
-}
-
 button {
 	background: none;
 	color: inherit;
@@ -212,128 +233,21 @@ button {
 		i {
 			mix-blend-mode: difference;
 			font-size: 23px;
+			
 		}
-		padding: 25px;
+		width: 78px;
+		height: 78px;
+		background-color: transparent;
+		&:hover{
+			background-color: #fff;
+		}
 	}
 }
 .widget-area {
-	top: 0;
-	margin: 0px auto;
-	left: 0;
-	right: 0;
-	text-align: center;
-	position: fixed;
-	z-index: 9999;
-}
-
-.info-heading {
-	color: black;
-	font-size: 35px;
-	margin: 0px 0px 30px 0px;
 	width: fit-content;
-	font-family: $Raleway;
-	font-weight: bold;
-}
-
-.info-p {
-	margin: 0px 0px 30px 0px;
-	color: black;
-	font-style: italic;
-	font-size: 1rem;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.contact-method {
-	table{
-		margin: 20px;
-		.method{
-			td{
-				padding: 20px 30px 10px 0px ;
-			}
-			td:last-child {
-				color: black;
-				font-family: $Code;
-				font-size: larger;
-			}
-		}
-	}
-	i {
-		color: black;
-		margin: 0px 30px;
-		cursor: pointer;
-		font-size: 2.2rem;
-		display: flex;
-		flex-direction:column;
-		transition: color 0.3s ease-in;
-		&:hover {
-			transition: color 0.3s ease-out;
-			&#facebook {
-				color: #385998;
-			}
-			&#linkedin {
-				color: #0e76a8;
-			}
-			&#hackerrank {
-				color: #00e361;
-			}
-			&#instagram {
-				color: #ff5a60;
-			}
-			&#mail {
-				color: #016dbf;
-			}
-			&#github {
-			}
-		}
-	}
-}
-
-.info-area {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: column;
-	bottom: 50px;
-	width: 100%;
-	.image-heading {
-		color: white;
-		font-size: 27px;
-		font-family: $Raleway;
-		margin: 5px;
-	}
-	.image-descript {
-		text-transform: uppercase;
-		font-family: $LexendPeta;
-		font-size: smaller;
-	}
-}
-
-.button-area {
-	margin: 10px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	button {
-		margin: 0px auto;
-		width: fit-content;
-		padding: 15px 50px;
-		border: 1px solid black;
-		span {
-			color: black;
-			font-size:1rem;
-			font-family: $Poppins;
-			letter-spacing: 2px;
-			text-transform: uppercase;
-		}
-		&:hover {
-			span {
-				color: white;
-			}
-			background-color: black;
-		}
-		margin: 20px;
-	}
-	//TODO technical function
+	margin-bottom: 20px;
 }
 
 .nav-pos-area {
@@ -522,38 +436,14 @@ canvas {
 	}
 }
 
-.hire-area{
-	border: 1px solid white;
-	width: fit-content;
-	padding: 5px 20px;
-	position: absolute;
-	right: 0;
-	z-index: 1001;
-	box-shadow: 2px 2px 30px rgba(195, 195, 195, 0.596) ;
-	margin: 14px 25px;
-	button{
-		padding: 5px 30px;
-		span{
-			text-transform: uppercase;
-			font-family: $Poppins;
-			mix-blend-mode: difference;
-			letter-spacing: 4px;
-			font-weight:bold;
-			font-size: 15px;
-		}
-	}
-	&:hover{
-		background-color: white;
-		color: black;
-		transform: scale(1.1);
-	}
-}
+
 
 .flickity-prev-next-button {
 	background: none;
   }
 
   .about-page{
+	margin-top: 30px;
 	padding: 100px;
 	@media (max-width: 700px) {
 		padding: 30px;
@@ -585,11 +475,17 @@ canvas {
 	.profile-content{
 		width: 100%;
 		.profile-greeting{
-			font-family: $Raleway;
-			font-size: 60px;
-			@media (max-width: 800px) {
-				text-align: center;
-				font-size: 35px;
+			overflow: hidden;
+			padding: 2px;
+			.letters{
+				line-height: 1em;
+				font-family: $Raleway;
+				transform-origin: 0% 100%;
+				font-size: 60px;
+				@media (max-width: 800px) {
+					text-align: center;
+					font-size: 35px;
+				}
 			}
 		}
 		.profile-description{
@@ -671,17 +567,17 @@ canvas {
 						&.bottom-circle{
 							&#ct{
 								stroke:  url("#gradient-ct");
-								animation: circularProgressing89 2s linear;
+								animation: circularProgressing89 4s linear;
 								stroke-dashoffset: 440-(440*89)/100;
 							}
 							&#sl{
 								stroke:  url("#gradient-sl");
-								animation: circularProgressing92 2s linear;
+								animation: circularProgressing92 4s linear;
 								stroke-dashoffset: 440-(440*92)/100;
 							}
 							&#tw{
 								stroke:url("#gradient-tw");
-								animation: circularProgressing87 2s linear;
+								animation: circularProgressing87 4s linear;
 								stroke-dashoffset: 440-(440*87)/100;
 							}
 						}
@@ -725,4 +621,30 @@ canvas {
 }
 
 
+.tech-page{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	.tech-dashboard{
+		margin: 0px auto;
+		width: 1400px;
+		height: 900px;
+		border-radius: 20px;
+		background-image: url("../img/hero.jpg");
+		background-position: center;
+		background-size: cover;
+		background-color: rgb(17, 17, 17);
+		box-shadow:  20px 20px 60px #222222, 
+             -20px -20px 60px #2e2e2e;
+		.tech-frontend{
 
+		}
+		.tech-backend{
+
+		}
+		.tech-other{
+
+		}
+	}
+}

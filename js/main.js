@@ -88,20 +88,24 @@ function openSection(e) {
 	let displayMode = "block";
 	const tl = gsap.timeline({});
 	switch (e.id) {
-	  	case "contact":
-			openContact(tl, e.id);
-			break;
 		case "project":
 			displayMode = "flex";
 			openProject(tl,e.id);
-		  	break;
+			break;
+		case "about":
+			openAbout(tl,e.id);
+			break;
 	  	default:
 			break;
 	}
-	tl.to(`.${e.id}-page`, { display: displayMode }, "open")
-		.to(".widget-area", { y: 0 }, "open").to([".heading",".nav-area"],{opacity: 0},"open").to([".heading",".nav-area"],{display: "none"},"open");
-	document.querySelector(".back-btn").id = e.id;
-	document.querySelector(".nav-btn").id = e.id;
+	tl
+	.to(`.${e.id}-page`, { display: displayMode }, "open")
+	.to(".widget-area", { y: 0 }, "open")
+	.to([".heading",".nav-area"],{opacity: 0},"open")
+	.to([".heading",".nav-area"],{display: "none"},"open");
+
+	$(`.back-btn`)[0].id = e.id;
+	$(".nav-btn")[0].id = e.id;
 }
 
 function openContact(timeline, id){
@@ -112,38 +116,88 @@ function openContact(timeline, id){
 		"open"
 	)
 }
+function openAbout(timeline, id){
+	timeline
+	.to(".about-page",{y:"-97vh",opacity: 1,
+		onBegin:()=>{
+			counterIncrement($(".number")[0],8)("87%");
+			counterIncrement($(".number")[1],8)("92%");
+			counterIncrement($(".number")[2],8)("85%");
+		}
+	})
+	.fromTo(
+		[`.profile-image`,".profile-description"],{opacity: 0},{opacity: 1,delay: 1, duration: 2},
+		"open"
+	);
+	anime.timeline({loop: false})
+	.add({
+		targets: '.profile-greeting .letters',
+		translateY: ["1.1em", 0],
+		translateX: ["0.55em", 0],
+		translateZ: 0,
+		rotateZ: [180, 0],
+		duration: 1000,
+		easing: "easeOutExpo",
+		delay: function(el, i) {
+			return 1000 + 50 * i;
+		},
+	});
+	
+}
 function openProject(timeline, id){
-	timeline.to(`.${id}-display`,{y:"-100vh", duration:1.5, ease: "power1.out"},"open").fromTo(`.${id}-card`,{opacity: 0},{delay:0.7,opacity: 1, stagger: 0.2, duration: 0.5, ease: "linear"},"open");
+	timeline
+	.to(`.${id}-display`,{y:"-100vh", duration:1.5, ease: "power1.out"},"open")
+	.fromTo(`.${id}-card`,{opacity: 0},{delay:0.7,opacity: 1, stagger: 0.2, duration: 0.5, ease: "linear"},"open");
 }
 
 function closeSection(e) {
 	const tl = gsap.timeline({});
 	switch (e.id) {
-	  	case "contact":
-			closeContact(tl,e.id);
-			break;
 		case "project":
 		  	closeProject(tl,e.id);
-		 	break;
+			 break;
+		case "about":
+			closeAbout(tl,e.id);
+			break;
 	  	default:
 			break;
 	}
 	tl
-		.to(".widget-area", { y: -100 }, "close").to(".nav-area",{display: "flex"},"close").to(".heading",{display: "block"},"close").to([".heading",".nav-area"],{opacity: 1},"close");
+	.to(".widget-area", { y: -100 }, "close")
+	.to(".nav-area",{display: "flex"},"close")
+	.to(".heading",{display: "block"},"close")
+	.to([".heading",".nav-area"],{opacity: 1},"close");
+}
+function closeAbout(timeline,id){
+	timeline
+	.fromTo(
+		[".about-page"],{opacity: 1, y: "-100vh"},{opacity: 0, y: "0", duration: 1, 
+		onComplete: ()=>{
+			$(".about-page")[0].style.display = "none";
+		}},
+		"open"
+	);
 }
 
-function closeContact(timeline, id){
-	timeline.fromTo(
-		[`#${id}-ul li`],
-		{ y: "-100vh" },
-		{ y: "0vh", stagger: 0.3, duration: 1, ease: "power1.out" },
-		"close"
-	).to(`.${id}-page`, { display: "none" });
-}
 function closeProject(timeline,id){
-	timeline.to(`.${id}-display`,{y:"100vh", duration: 1.5, ease: "power2.out"},"close");
+	timeline
+	.to(`.${id}-display`,{y:"0", duration: 1.5, ease: "power2.out"},"close");
 }
 
 mainTimeline();
 
+function counterIncrement(item, duration){
+	return (goal) =>{
+		console.log(item.textContent.trim());
+		let counter = 0;
+		setInterval(()=>{
+			if (counter + "%" === goal){
+				clearInterval();
+			} else {
+				counter++;
+				item.innerHTML = `<h2>${counter}<span>%</span></h2>`;
+			}
+		}, duration);
+	}
+}
 //TODO 3d cube
