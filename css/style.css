@@ -14,7 +14,7 @@
 
 body {
   background-color: black;
-  overflow: auto;
+  overflow: hidden;
   scrollbar-width: none;
 }
 
@@ -431,6 +431,7 @@ canvas {
 .project-display {
   background-color: rgba(15, 15, 15, 0.178);
   padding: 50px;
+  border-radius: 30px;
   -webkit-box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192);
           box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192);
   margin: 10px;
@@ -921,9 +922,7 @@ canvas {
 }
 
 .tech-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -937,15 +936,260 @@ canvas {
 }
 
 .tech-page .tech-dashboard {
+  position: relative;
+  overflow: hidden;
   margin: 0px auto;
-  width: 1400px;
-  height: 900px;
+  padding: 50px;
+  max-width: 1330px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 20px;
-  background-image: url("../img/hero.jpg");
   background-position: center;
   background-size: cover;
-  background-color: #111111;
-  -webkit-box-shadow: 20px 20px 60px #222222,  -20px -20px 60px #2e2e2e;
-          box-shadow: 20px 20px 60px #222222,  -20px -20px 60px #2e2e2e;
+  background-color: rgba(0, 0, 0, 0.13);
+  -webkit-box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192);
+          box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192);
+}
+
+.tech-page .tech-dashboard .tech-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 50px;
+}
+
+.tech-page .tech-dashboard .tech-nav .tech-button {
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  background: #202020;
+  -webkit-box-shadow: 20px 20px 60px #121212,  -20px -20px 60px #2e2e2e;
+          box-shadow: 20px 20px 60px #121212,  -20px -20px 60px #2e2e2e;
+  padding: 10px 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+.tech-page .tech-dashboard .tech-nav .tech-button.is-selected {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background: -webkit-gradient(linear, left top, right top, from(#d6980b), color-stop(37%, #c7931b), to(#ffe38d));
+  background: linear-gradient(90deg, #d6980b 0%, #c7931b 37%, #ffe38d 100%);
+  color: #1a1a1a;
+}
+
+.tech-page .tech-dashboard .tech-nav .tech-button.is-selected:hover {
+  border: unset;
+}
+
+.tech-page .tech-dashboard .tech-nav .tech-button:hover {
+  border: 2px solid #e4c951;
+}
+
+.tech-page .tech-dashboard .tech-heading {
+  font-family: "Raleway", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  font-size: 50px;
+}
+
+.tech-page .tech-dashboard .tech-card {
+  width: 100px;
+  height: 100px;
+  margin: 10px 10px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tech-page .tech-dashboard .tech-card img {
+  width: 100%;
+  margin: 0px auto;
+}
+
+.tech-page .tech-dashboard .tech-card:hover {
+  position: relative;
+}
+
+.tech-page .tech-dashboard .tech-card:hover::after {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  color: white;
+  text-shadow: 2px 2px 10px white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+}
+
+.tech-page .tech-dashboard .tech-card:hover#css::after {
+  content: "css";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#sass::after {
+  content: "sass";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#bootstrap::after {
+  content: "bootstrap";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#mui::after {
+  content: "mui";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#html::after {
+  content: "html";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#materialize::after {
+  content: "materialize";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#react::after {
+  content: "react";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#redux::after {
+  content: "redux";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#javascript::after {
+  content: "javascript";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#nodejs::after {
+  content: "nodejs";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#graphql::after {
+  content: "graphql";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#firebase::after {
+  content: "firebase";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#mongodb::after {
+  content: "mongodb";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#mysql::after {
+  content: "mysql";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#netlify::after {
+  content: "netlify";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#figma::after {
+  content: "figma";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#pts::after {
+  content: "Adobe Photoshop";
+}
+
+.tech-page .tech-dashboard .tech-card:hover#premiere::after {
+  content: "Adobe Premiere";
+}
+
+.tech-page .tech-dashboard .circle {
+  background-color: #fff;
+  border-radius: 100px;
+}
+
+.tech-page .tech-dashboard .tech-frontend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tech-page .tech-dashboard .tech-frontend .container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tech-page .tech-dashboard .tech-backend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tech-page .tech-dashboard .tech-backend .container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.tech-page .tech-dashboard .tech-other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tech-page .tech-dashboard .tech-other .container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 /*# sourceMappingURL=style.css.map */

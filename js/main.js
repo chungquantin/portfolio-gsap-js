@@ -88,6 +88,10 @@ function openSection(e) {
 	let displayMode = "block";
 	const tl = gsap.timeline({});
 	switch (e.id) {
+		case "tech":
+			displayMode = "flex";
+			openTech(tl,e.id);
+			break;
 		case "project":
 			displayMode = "flex";
 			openProject(tl,e.id);
@@ -120,9 +124,9 @@ function openAbout(timeline, id){
 	timeline
 	.to(".about-page",{y:"-97vh",opacity: 1,
 		onBegin:()=>{
-			counterIncrement($(".number")[0],8)("87%");
-			counterIncrement($(".number")[1],8)("92%");
-			counterIncrement($(".number")[2],8)("85%");
+			counterIncrement($(".number")[0],30)("87%");
+			counterIncrement($(".number")[1],30)("92%");
+			counterIncrement($(".number")[2],30)("85%");
 		}
 	})
 	.fromTo(
@@ -144,6 +148,12 @@ function openAbout(timeline, id){
 	});
 	
 }
+function openTech(timeline, id){
+	timeline.to(".tech-page",{y:"-100vh",display: "flex",duration:1},"open");
+}
+function closeTech(timeline,id){
+	timeline.to(".tech-page",{y:"0",display: "none",duration:1},"close");
+}
 function openProject(timeline, id){
 	timeline
 	.to(`.${id}-display`,{y:"-100vh", duration:1.5, ease: "power1.out"},"open")
@@ -158,6 +168,9 @@ function closeSection(e) {
 			 break;
 		case "about":
 			closeAbout(tl,e.id);
+			break;
+		case "tech":
+			closeTech(tl,e.id);
 			break;
 	  	default:
 			break;
@@ -198,6 +211,24 @@ function counterIncrement(item, duration){
 				item.innerHTML = `<h2>${counter}<span>%</span></h2>`;
 			}
 		}, duration);
+	}
+}
+
+function openTechArea(e){
+	const total = 3;
+	const techAreas = $(".tech-area");
+	for (let i = 0; i < total; i++) {
+		if (techAreas[i].id == e.id+"-page") {
+			console.log(techAreas[i]);
+		}
+	}
+	const techButtons = $(".tech-button");
+	for (let i = 0; i < total+1; i++) {
+		if (techButtons[i].id == e.id) {
+			techButtons[i].classList.add("is-selected");
+		} else {
+			techButtons[i].classList.remove("is-selected");
+		}
 	}
 }
 //TODO 3d cube

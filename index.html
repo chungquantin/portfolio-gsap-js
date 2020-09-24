@@ -331,22 +331,94 @@
 			id="tech-page"
 		>
 			<div class="tech-dashboard">
-				<div class="tech-heading">
-					My technical skills
-				</div>
-				<div class="tech-frontend">
-					<div class="tech-card">
-
+				<div style="display:flex; margin-bottom: 50px;">
+					<div class="tech-heading">
+						My technical skills
 					</div>
-					<div class="tech-card"></div>
+					<div class="tech-nav">
+						<div>
+							<button class="tech-button is-selected" id="all" onClick="openTechArea(this);">
+								All
+							</button>
+							<button class="tech-button" id="frontend" onClick="openTechArea(this);">
+								Front-end
+							</button>
+							<button class="tech-button" id="backend" onClick="openTechArea(this);">
+								Back-end
+							</button>
+							<button class="tech-button" id="utility" onClick="openTechArea(this);">
+								Utilities
+							</button>
+						</div>
+						
+					</div>
 				</div>
-				<div class="tech-backend">
-					<div class="tech-card"></div>
-					<div class="tech-card"></div>
+				
+				<div class="tech-area tech-frontend">
+					<div class="container">
+						<div class="tech-card" id="css">
+							<img src="./img/CSS.3.svg.png" alt="css logo" style="width: 50%; filter: drop-shadow(2px 2px 20px rgb(56, 108, 153));">
+						</div>
+						<div class="tech-card" id="sass">
+							<img src="./img/sass.png" alt="Sass logo" style="filter: drop-shadow(2px 2px 20px rgb(176, 85, 192));">
+						</div>
+						<div class="tech-card" id="bootstrap">
+							<img src="./img/bootstrap.png" alt="Bootstrap logo" style="width: 85%;filter: drop-shadow(2px 2px 20px rgb(78, 30, 156));">
+						</div>
+						<div class="tech-card" id="mui">
+							<img src="./img/materialui.png" alt="MUI logo" style="width: 90%;filter: drop-shadow(2px 2px 20px rgb(46, 101, 149));">
+						</div>
+						<div class="tech-card" id="html">
+							<img src="./img/html.png" alt="HTML logo" style="width: 70%;filter: drop-shadow(2px 2px 20px rgb(136, 56, 36));">
+						</div>
+						<div class="tech-card" id="materialize">
+							<img src="./img/materialize.png" alt="Materialize logo"  style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(221, 125, 149));">
+						</div>
+						<div class="tech-card" id="react">
+							<img src="./img/react.png" alt="Reactjs png" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(77, 136, 189));">
+						</div>
+						<div class="tech-card" id="redux">
+							<img src="./img/redux.png" alt="Redux logo" style="width: 65%;filter: drop-shadow(2px 2px 20px rgb(129, 66, 200));">
+						</div>
+						<div class="tech-card" id="javascript">
+							<img src="./img/javascript.png" alt="Javascript logo" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(116, 104, 40));">
+						</div>
+					</div>
 				</div>
-				<div class="tech-other">
-					<div class="tech-card"></div>
-					<div class="tech-card"></div>
+				<div class="tech-area tech-backend">
+					<div class="container">
+						<div class="tech-card" id="nodejs">
+							<img src="./img/nodejs.png" alt="NodeJS logo" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(9, 97, 31));">
+						</div>
+						<div class="tech-card" id="graphql">
+							<img src="./img/graphql.png" alt="GraphQL logo" style="width: 70%;filter: drop-shadow(2px 2px 20px rgb(128, 47, 87));">
+						</div>
+						<div class="tech-card" id="firebase">
+							<img src="./img/firebase.png" alt="Firebase logo" style="width: 50%;filter: drop-shadow(2px 2px 10px rgb(182, 134, 1));">
+						</div>
+						<div class="tech-card" id="mongodb">
+							<img src="./img/mongodb.png" alt="MongoDb logo" style="width: 80%;filter: drop-shadow(2px 2px 15px rgb(15, 105, 30));">
+						</div>
+						<div class="tech-card" id="mysql">
+							<img src="./img/mysql.png" alt="MySQL logo" style="width: 60%;filter: drop-shadow(2px 2px 10px rgb(57, 95, 184));">
+						</div>
+						<div class="tech-card" id="netlify">
+							<img src="./img/netlify-logo-758722CDF4-seeklogo.com.png" alt="Netlify logo" style="width: 70%;filter: drop-shadow(2px 2px 20px rgb(56, 108, 153));">
+						</div>
+					</div>
+				</div>
+				<div class="tech-area tech-other">
+					<div class="container">
+						<div class="tech-card" id="figma">
+							<img src="./img/Figma-1-logo.png" alt="Figma logo" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(92, 92, 92));">
+						</div>
+						<div class="tech-card" id="pts">
+							<img src="./img/pts.jpeg" alt="Photoshop logo" style="width: 60%; filter: drop-shadow(2px 2px 20px rgba(73, 150, 251, 0.774))">
+						</div>
+						<div class="tech-card" id="premiere">
+							<img src="./img/premiere.png" alt="Premiere logo" style="width: 60%; filter: drop-shadow(2px 2px 20px rgba(169, 24, 182, 0.76))">
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -525,7 +597,7 @@
 				animate();
 			};
 
-			// init();
+			init();
 		</script>
 		<script src="./js/main.js"></script>
 	</body>

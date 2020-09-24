@@ -62,7 +62,7 @@ body {
 		}
 	}
 	background-color: $mainColor;
-	overflow: auto;
+	overflow: hidden;
 	scrollbar-width: none;
 	&::-webkit-scrollbar {
 		display: none;
@@ -293,6 +293,7 @@ canvas {
 .project-display{
 	background-color: rgba(15, 15, 15, 0.178);
 	padding: 50px;
+	border-radius: 30px;
 	box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192) ;
 	margin: 10px;
 	width: 1400px;
@@ -622,29 +623,172 @@ canvas {
 
 
 .tech-page{
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	.tech-dashboard{
+		position: relative;
+		overflow: hidden;
+		.tech-nav{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 0px 50px;
+			.tech-button{
+				margin: 10px;
+				font-size: 20px;	
+				border-radius: 10px;
+				background: #202020;
+				box-shadow:  20px 20px 60px #121212, 
+							-20px -20px 60px #2e2e2e;
+				padding: 10px 20px;
+				font-family: $Raleway;
+				&.is-selected{
+					transform: scale(1.1);
+					background: linear-gradient(90deg, rgba(214,152,11,1) 0%, rgba(199,147,27,1) 37%, rgb(255, 227, 141) 100%);
+					color: rgb(26, 26, 26);
+					&:hover{
+						border: unset;
+					}
+				}
+				&:hover{
+					border: 2px solid rgb(228, 201, 81);
+				}
+			}
+		}
 		margin: 0px auto;
-		width: 1400px;
-		height: 900px;
+		padding: 50px;
+		max-width: 1330px;
+		height: fit-content;
 		border-radius: 20px;
-		background-image: url("../img/hero.jpg");
 		background-position: center;
 		background-size: cover;
-		background-color: rgb(17, 17, 17);
-		box-shadow:  20px 20px 60px #222222, 
-             -20px -20px 60px #2e2e2e;
+		background-color: rgba(0, 0, 0, 0.13);
+		box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192) ;
+		.tech-heading{
+			font-family: $Raleway;
+			width: fit-content;
+			text-align: center;
+			font-size: 50px;
+		}
+		.tech-card{
+			width: 100px;
+			height: 100px;
+			margin: 10px 10px;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			img{
+				width: 100%;
+				margin: 0px auto;
+			}
+			&:hover{
+				position: relative;
+				&::after{
+					transition: all 0.5s linear;
+					color: white;
+					text-shadow: 2px 2px 10px white;
+					height: fit-content;
+					min-width: 100%;
+					font-family: $Raleway;
+					font-size: 20px;
+					justify-content: center;
+					display: flex;
+					text-transform: uppercase;
+					position: absolute;
+					bottom: 0;	
+				}
+				&#css::after{
+					content: "css";
+				}
+				&#sass::after{
+					content: "sass";
+				}
+				&#bootstrap::after{
+					content: "bootstrap";
+				}
+				&#mui::after{
+					content: "mui";
+				}
+				&#html::after{
+					content: "html";
+				}
+				&#materialize::after{
+					content: "materialize";
+				}
+				&#react::after{
+					content: "react";
+				}
+				&#redux::after{
+					content: "redux";
+				}
+				&#javascript::after{
+					content: "javascript";
+				}
+				&#nodejs::after{
+					content: "nodejs";
+				}
+				&#graphql::after{
+					content: "graphql";
+				}
+				&#firebase::after{
+					content: "firebase";
+				}
+				&#mongodb::after{
+					content: "mongodb";
+				}
+				&#mysql::after{
+					content: "mysql";
+				}
+				&#netlify::after{
+					content: "netlify";
+				}
+				&#figma::after{
+					content: "figma";
+				}
+				&#pts::after{
+					content: "Adobe Photoshop";
+				}
+				&#premiere::after{
+					content: "Adobe Premiere";
+				}
+			}
+		}
+		.circle{
+			background-color: #fff;
+			border-radius: 100px;
+		}
 		.tech-frontend{
-
+			display: flex;
+			flex-direction: column;
+			.container{
+				width: fit-content;
+				margin: 0px auto;
+				display: flex;
+				flex-wrap: wrap;
+			}
 		}
 		.tech-backend{
-
+			display: flex;
+			flex-direction: column;
+			.container{
+				width: fit-content;
+				margin: 0px auto;
+				display: flex;
+				flex-wrap: wrap;
+			}
 		}
 		.tech-other{
-
+			display: flex;
+			flex-direction: column;
+			.container{
+				width: fit-content;
+				margin: 0px auto;
+				display: flex;
+				flex-wrap: wrap;
+			}
 		}
 	}
 }
