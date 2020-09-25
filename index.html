@@ -24,7 +24,10 @@
 			href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css"
 			media="all"
 		/>
-		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+		/>
 		<link rel="stylesheet" href="static/css/style.css" />
 		<link
 			rel="stylesheet"
@@ -52,7 +55,6 @@
 			href="https://fonts.googleapis.com/css?family=Anton|Montserrat|Poppins|Roboto&amp;display=swap"
 			rel="stylesheet"
 		/>
-		
 	</head>
 	<body>
 		<div class="nav-bar">
@@ -89,7 +91,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<section class="loading-page">
 			<ul>
 				<li></li>
@@ -164,8 +166,7 @@
 				</h1>
 			</div>
 		</section>
-		
-		
+
 		<section class="home-page" style="background-color: none">
 			<h1 class="heading" style="z-index: 1">
 				<div id="heading-span">
@@ -221,9 +222,7 @@
 				</div>
 			</h1>
 			<div class="nav-area" style="z-index: 1">
-				<div class="nav-btn" onclick="openSection(this)" id="about">
-					About
-				</div>
+				<div class="nav-btn" onclick="openSection(this)" id="about">About</div>
 				<div class="nav-btn" onclick="openSection(this)" id="tech">
 					Technology
 				</div>
@@ -235,222 +234,401 @@
 				</div>
 			</div>
 		</section>
-		<section
-			class="about-page"
-			id="about-page"
-			style="display: none;"
-		>	
-		<div class="profile-intro">
-			<div class="profile-image">
-				<img src="./img/IMG_0180.JPG" alt="My image">
-			</div>
-			<div class="profile-content">
-				<div class="profile-greeting">
-					<div class="letters">Hi, I'm Chase from Viet Nam!</div>
-				</div>
-				<div class="profile-description">
-					You can call me a freelancer, a coder, a programmer...But sum all of it, my only responsiblity is bringing your idea into real life. Web development has grown exponentially in any industry. There are comparisons between a business without a website and the one with the website. And the outcome totally leans on the technology. And personally, I think web development is having a lot of potentials. So if you need to create a portfolio,a responsive website, a business ecommerce website or a PWA (Progressive Web Apps), send me a message!
-				</div>
-			</div>
-		</div>
-		<div class="box-container">
-			<div class="box">
-				<div class="percent">
-					<svg>
-						<defs>
-							  <!-- Gradient Color -->
-							<linearGradient id="gradient-ct" x1="0%" y1="0%" x2="0%" y2="100%">
-							  <stop offset="0%" stop-color="#21D4FD" />
-							  <stop offset="100%" stop-color="#B721FF" />
-							</linearGradient>
-						  </defs>
-						  
-						<circle cx="70" cy="70" r="70" class="top-circle"></circle>
-						<circle cx="70" cy="70" r="70" class="bottom-circle" id="ct"></circle>
-					</svg>
-					<div class="number">
-						<h2>89<span>%</span></h2>
+		<section class="about-page" id="about-page">
+			<div class="about-container">
+				<div class="profile-intro">
+					<div class="profile-image">
+						<img src="./img/IMG_0180.JPG" alt="My image" />
+					</div>
+					<div class="profile-content">
+						<div class="profile-greeting">
+							<div class="letters">Hi, I'm Chase from Viet Nam!</div>
+						</div>
+						<div class="profile-description">
+							You can call me a freelancer, a coder, a programmer...But sum all
+							of it, my only responsiblity is bringing your idea into real life.
+							Web development has grown exponentially in any industry. There are
+							comparisons between a business without a website and the one with
+							the website. And the outcome totally leans on the technology. And
+							personally, I think web development is having a lot of potentials.
+							So if you need to create a portfolio,a responsive website, a
+							business ecommerce website or a PWA (Progressive Web Apps), send
+							me a message!
+						</div>
 					</div>
 				</div>
-				<h2 class="text">
-					Critical Thinking
-					<div>
-						Ability to improvise in an unexpected problem. Having a strong fundamental of data structures and algorithms
+				<div class="box-container">
+					<div class="box">
+						<div class="percent">
+							<svg>
+								<defs>
+									<!-- Gradient Color -->
+									<linearGradient
+										id="gradient-ct"
+										x1="0%"
+										y1="0%"
+										x2="0%"
+										y2="100%"
+									>
+										<stop offset="0%" stop-color="#21D4FD" />
+										<stop offset="100%" stop-color="#B721FF" />
+									</linearGradient>
+								</defs>
+
+								<circle cx="70" cy="70" r="70" class="top-circle"></circle>
+								<circle
+									cx="70"
+									cy="70"
+									r="70"
+									class="bottom-circle"
+									id="ct"
+								></circle>
+							</svg>
+							<div class="number">
+								<h2>89<span>%</span></h2>
+							</div>
+						</div>
+						<h2 class="text">
+							Critical Thinking
+							<div>
+								Ability to improvise in an unexpected problem. Having a strong
+								fundamental of data structures and algorithms
+							</div>
+						</h2>
 					</div>
-				</h2>
-			</div>
-			<div class="box">
-				<div class="percent">
-					<svg>
-						<defs>
-							<linearGradient id="gradient-sl" x1="0%" y1="0%" x2="0%" y2="100%">
-							  <stop offset="0%" stop-color="#08AEEA" />
-							  <stop offset="100%" stop-color="#2AF598 " />
-							  
-							</linearGradient>
-						  </defs>
-						<circle cx="70" cy="70" r="70" class="top-circle"></circle>
-						<circle cx="70" cy="70" r="70" class="bottom-circle" id="sl"></circle>
-					</svg>
-					<div class="number">
-						<h2>92<span>%</span></h2>
+					<div class="box">
+						<div class="percent">
+							<svg>
+								<defs>
+									<linearGradient
+										id="gradient-sl"
+										x1="0%"
+										y1="0%"
+										x2="0%"
+										y2="100%"
+									>
+										<stop offset="0%" stop-color="#08AEEA" />
+										<stop offset="100%" stop-color="#2AF598 " />
+									</linearGradient>
+								</defs>
+								<circle cx="70" cy="70" r="70" class="top-circle"></circle>
+								<circle
+									cx="70"
+									cy="70"
+									r="70"
+									class="bottom-circle"
+									id="sl"
+								></circle>
+							</svg>
+							<div class="number">
+								<h2>92<span>%</span></h2>
+							</div>
+						</div>
+						<h2 class="text">
+							Self-learning
+							<div>
+								80% of my knowledge is acquired from the self-taught ability.
+								Whatever happens, I can still catch up with.
+							</div>
+						</h2>
+					</div>
+					<div class="box">
+						<div class="percent">
+							<svg>
+								<defs>
+									<linearGradient
+										id="gradient-tw"
+										x1="0%"
+										y1="0%"
+										x2="0%"
+										y2="100%"
+									>
+										<stop offset="0%" stop-color="#FFE53B" />
+										<stop offset="100%" stop-color="#FF2525" />
+									</linearGradient>
+								</defs>
+								<circle cx="70" cy="70" r="70" class="top-circle"></circle>
+								<circle
+									cx="70"
+									cy="70"
+									r="70"
+									class="bottom-circle"
+									id="tw"
+								></circle>
+							</svg>
+							<div class="number">
+								<h2>87<span>%</span></h2>
+							</div>
+						</div>
+						<h2 class="text">
+							Teamwork
+							<div>
+								During my uni-life, I have participated in many team projects
+								which include presentations, communication, and more.
+							</div>
+						</h2>
 					</div>
 				</div>
-				<h2 class="text">Self-learning
-					<div>
-						80% of my knowledge is acquired from the self-taught ability. Whatever happens, I can still catch up with.
-					</div>
-				</h2>
 			</div>
-			<div class="box">
-				<div class="percent">
-					<svg>
-						<defs>
-							<linearGradient id="gradient-tw" x1="0%" y1="0%" x2="0%" y2="100%">
-							  <stop offset="0%" stop-color="#FFE53B" />
-							  <stop offset="100%" stop-color="#FF2525" />
-							</linearGradient>
-						  </defs>
-						<circle cx="70" cy="70" r="70" class="top-circle"></circle>
-						<circle cx="70" cy="70" r="70" class="bottom-circle" id="tw"></circle>
-					</svg>
-					<div class="number">
-						<h2>87<span>%</span></h2>
-					</div>
-				</div>
-				<h2 class="text">Teamwork
-					<div>
-						During my uni-life, I have participated in many team projects which include presentations, communication, and more.
-					</div>
-				</h2>
-			</div>
-		</div>
 		</section>
-		<section
-			class="tech-page"
-			id="tech-page"
-		>
+		<section class="tech-page" id="tech-page">
 			<div class="tech-dashboard">
-				<div style="display:flex; margin-bottom: 50px;">
-					<div class="tech-heading">
-						My technical skills
-					</div>
+				<div style="display: flex; margin-bottom: 50px">
+					<div class="tech-heading">My technical skills</div>
 					<div class="tech-nav">
 						<div>
-							<button class="tech-button is-selected" id="all" onClick="openTechArea(this);">
+							<button
+								class="tech-button is-selected"
+								id="all"
+								onClick="openTechArea(this);"
+							>
 								All
 							</button>
-							<button class="tech-button" id="frontend" onClick="openTechArea(this);">
+							<button
+								class="tech-button"
+								id="frontend"
+								onClick="openTechArea(this);"
+							>
 								Front-end
 							</button>
-							<button class="tech-button" id="backend" onClick="openTechArea(this);">
+							<button
+								class="tech-button"
+								id="backend"
+								onClick="openTechArea(this);"
+							>
 								Back-end
 							</button>
-							<button class="tech-button" id="utility" onClick="openTechArea(this);">
+							<button
+								class="tech-button"
+								id="utility"
+								onClick="openTechArea(this);"
+							>
 								Utilities
 							</button>
 						</div>
-						
 					</div>
 				</div>
-				
-				<div class="tech-area tech-frontend">
+
+				<div class="tech-area tech-frontend" id="frontend">
 					<div class="container">
 						<div class="tech-card" id="css">
-							<img src="./img/CSS.3.svg.png" alt="css logo" style="width: 50%; filter: drop-shadow(2px 2px 20px rgb(56, 108, 153));">
+							<img
+								src="./img/CSS.3.svg.png"
+								alt="css logo"
+								style="
+									width: 50%;
+									filter: drop-shadow(2px 2px 20px rgb(56, 108, 153));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="sass">
-							<img src="./img/sass.png" alt="Sass logo" style="filter: drop-shadow(2px 2px 20px rgb(176, 85, 192));">
+							<img
+								src="./img/sass.png"
+								alt="Sass logo"
+								style="filter: drop-shadow(2px 2px 20px rgb(176, 85, 192))"
+							/>
 						</div>
 						<div class="tech-card" id="bootstrap">
-							<img src="./img/bootstrap.png" alt="Bootstrap logo" style="width: 85%;filter: drop-shadow(2px 2px 20px rgb(78, 30, 156));">
+							<img
+								src="./img/bootstrap.png"
+								alt="Bootstrap logo"
+								style="
+									width: 85%;
+									filter: drop-shadow(2px 2px 20px rgb(78, 30, 156));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="mui">
-							<img src="./img/materialui.png" alt="MUI logo" style="width: 90%;filter: drop-shadow(2px 2px 20px rgb(46, 101, 149));">
+							<img
+								src="./img/materialui.png"
+								alt="MUI logo"
+								style="
+									width: 90%;
+									filter: drop-shadow(2px 2px 20px rgb(46, 101, 149));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="html">
-							<img src="./img/html.png" alt="HTML logo" style="width: 70%;filter: drop-shadow(2px 2px 20px rgb(136, 56, 36));">
+							<img
+								src="./img/html.png"
+								alt="HTML logo"
+								style="
+									width: 70%;
+									filter: drop-shadow(2px 2px 20px rgb(136, 56, 36));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="materialize">
-							<img src="./img/materialize.png" alt="Materialize logo"  style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(221, 125, 149));">
+							<img
+								src="./img/materialize.png"
+								alt="Materialize logo"
+								style="
+									width: 80%;
+									filter: drop-shadow(2px 2px 20px rgb(221, 125, 149));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="react">
-							<img src="./img/react.png" alt="Reactjs png" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(77, 136, 189));">
+							<img
+								src="./img/react.png"
+								alt="Reactjs png"
+								style="
+									width: 80%;
+									filter: drop-shadow(2px 2px 20px rgb(77, 136, 189));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="redux">
-							<img src="./img/redux.png" alt="Redux logo" style="width: 65%;filter: drop-shadow(2px 2px 20px rgb(129, 66, 200));">
+							<img
+								src="./img/redux.png"
+								alt="Redux logo"
+								style="
+									width: 65%;
+									filter: drop-shadow(2px 2px 20px rgb(129, 66, 200));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="javascript">
-							<img src="./img/javascript.png" alt="Javascript logo" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(116, 104, 40));">
+							<img
+								src="./img/javascript.png"
+								alt="Javascript logo"
+								style="
+									width: 80%;
+									filter: drop-shadow(2px 2px 20px rgb(116, 104, 40));
+								"
+							/>
 						</div>
 					</div>
 				</div>
-				<div class="tech-area tech-backend">
+				<div class="tech-area tech-backend" id="backend">
 					<div class="container">
 						<div class="tech-card" id="nodejs">
-							<img src="./img/nodejs.png" alt="NodeJS logo" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(9, 97, 31));">
+							<img
+								src="./img/nodejs.png"
+								alt="NodeJS logo"
+								style="
+									width: 80%;
+									filter: drop-shadow(2px 2px 20px rgb(9, 97, 31));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="graphql">
-							<img src="./img/graphql.png" alt="GraphQL logo" style="width: 70%;filter: drop-shadow(2px 2px 20px rgb(128, 47, 87));">
+							<img
+								src="./img/graphql.png"
+								alt="GraphQL logo"
+								style="
+									width: 70%;
+									filter: drop-shadow(2px 2px 20px rgb(128, 47, 87));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="firebase">
-							<img src="./img/firebase.png" alt="Firebase logo" style="width: 50%;filter: drop-shadow(2px 2px 10px rgb(182, 134, 1));">
+							<img
+								src="./img/firebase.png"
+								alt="Firebase logo"
+								style="
+									width: 50%;
+									filter: drop-shadow(2px 2px 10px rgb(182, 134, 1));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="mongodb">
-							<img src="./img/mongodb.png" alt="MongoDb logo" style="width: 80%;filter: drop-shadow(2px 2px 15px rgb(15, 105, 30));">
+							<img
+								src="./img/mongodb.png"
+								alt="MongoDb logo"
+								style="
+									width: 80%;
+									filter: drop-shadow(2px 2px 15px rgb(15, 105, 30));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="mysql">
-							<img src="./img/mysql.png" alt="MySQL logo" style="width: 60%;filter: drop-shadow(2px 2px 10px rgb(57, 95, 184));">
+							<img
+								src="./img/mysql.png"
+								alt="MySQL logo"
+								style="
+									width: 60%;
+									filter: drop-shadow(2px 2px 10px rgb(57, 95, 184));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="netlify">
-							<img src="./img/netlify-logo-758722CDF4-seeklogo.com.png" alt="Netlify logo" style="width: 70%;filter: drop-shadow(2px 2px 20px rgb(56, 108, 153));">
+							<img
+								src="./img/netlify-logo-758722CDF4-seeklogo.com.png"
+								alt="Netlify logo"
+								style="
+									width: 70%;
+									filter: drop-shadow(2px 2px 20px rgb(56, 108, 153));
+								"
+							/>
 						</div>
 					</div>
 				</div>
-				<div class="tech-area tech-other">
+				<div class="tech-area tech-other" id="utility">
 					<div class="container">
 						<div class="tech-card" id="figma">
-							<img src="./img/Figma-1-logo.png" alt="Figma logo" style="width: 80%;filter: drop-shadow(2px 2px 20px rgb(92, 92, 92));">
+							<img
+								src="./img/Figma-1-logo.png"
+								alt="Figma logo"
+								style="
+									width: 80%;
+									filter: drop-shadow(2px 2px 20px rgb(92, 92, 92));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="pts">
-							<img src="./img/pts.jpeg" alt="Photoshop logo" style="width: 60%; filter: drop-shadow(2px 2px 20px rgba(73, 150, 251, 0.774))">
+							<img
+								src="./img/pts.jpeg"
+								alt="Photoshop logo"
+								style="
+									width: 60%;
+									filter: drop-shadow(2px 2px 20px rgba(73, 150, 251, 0.774));
+								"
+							/>
 						</div>
 						<div class="tech-card" id="premiere">
-							<img src="./img/premiere.png" alt="Premiere logo" style="width: 60%; filter: drop-shadow(2px 2px 20px rgba(169, 24, 182, 0.76))">
+							<img
+								src="./img/premiere.png"
+								alt="Premiere logo"
+								style="
+									width: 60%;
+									filter: drop-shadow(2px 2px 20px rgba(169, 24, 182, 0.76));
+								"
+							/>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section
-			class="project-page"
-			style="display: flex;"
-			id="project-page"
-		>
+		<section class="project-page" style="display: flex" id="project-page">
 			<div class="project-display">
-				<div class="project-card" style="filter: saturate(100%); overflow: hidden;">
+				<div
+					class="project-card"
+					style="filter: saturate(100%); overflow: hidden"
+				>
 					<div class="project-heading">
-						<h1>
-							UI/UX Design
-						</h1>
-						<div class="description">
-							Youtube Mock Design With Dark Mode
-						</div>
+						<h1>UI/UX Design</h1>
+						<div class="description">Youtube Mock Design With Dark Mode</div>
 					</div>
-					<video width="100%" height="100%" style="transform: scale(1.1); margin-top: -180px;" muted autoplay loop>
-						<source src="./video/youtubeMock.mp4"  type="video/mp4">
+					<video
+						width="100%"
+						height="100%"
+						style="transform: scale(1.1); margin-top: -180px"
+						muted
+						autoplay
+						loop
+					>
+						<source src="./video/youtubeMock.mp4" type="video/mp4" />
 						Your browser does not support the video tag.
 					</video>
 				</div>
 				<div class="project-card" id="fleg">
 					<div class="project-detail">
 						<h2>FLEG - Video Game Shop</h2>
-						<p> Ecommerce Website Demo</p>
+						<p>Ecommerce Website Demo</p>
 					</div>
-					<div class="project-image">
-						
-					</div>
-					<div class = "action-area">
+					<div class="project-image"></div>
+					<div class="action-area">
 						<form action="http://fleg.herokuapp.com/">
 							<button class="action-link" title="Link to website">
 								<i class="fa fa-link" aria-hidden="true"></i>
@@ -464,10 +642,10 @@
 				<div class="project-card" id="dakonet">
 					<div class="project-detail">
 						<h2>Dakonet Corner Shop</h2>
-						<p> Ecommerce Website Demo</p>
+						<p>Ecommerce Website Demo</p>
 					</div>
 					<div class="project-image">
-						<div class = "action-area">
+						<div class="action-area">
 							<form action="https://dakonet.netlify.app/">
 								<button class="action-link" title="Link to website">
 									<i class="fa fa-link" aria-hidden="true"></i>
@@ -480,32 +658,70 @@
 					</div>
 				</div>
 				<div class="project-card" id="edit">
-					<div class="edit-heading">
-						Video editing
-					</div>
+					<div class="edit-heading">Video editing</div>
 					<div class="main-carousel">
 						<div class="carousel-cell" data-flickity>
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/AU_KmRG5q2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/AU_KmRG5q2w"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
 						</div>
 						<div class="carousel-cell">
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/_dxDaHUxKBs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/_dxDaHUxKBs"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
 						</div>
 						<div class="carousel-cell">
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ECIc3YmcOHo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/ECIc3YmcOHo"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
 						</div>
 						<div class="carousel-cell">
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/svH2D4MyF-M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/svH2D4MyF-M"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
 						</div>
 						<div class="carousel-cell">
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/nL1DoT1zJOM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/nL1DoT1zJOM"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
 						</div>
 						<div class="carousel-cell">
-							<iframe width="100%" height="100%" src="https://www.youtube.com/embed/GjPBd2enVaw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/GjPBd2enVaw"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
 						</div>
 					</div>
-					  
 				</div>
-				
 			</div>
 		</section>
 		<section
@@ -514,26 +730,22 @@
 			id="background-page"
 		></section>
 		<script>
-			$('.main-carousel').flickity({
-				cellAlign: 'left',
+			$(".main-carousel").flickity({
+				cellAlign: "left",
 				contain: true,
 				wrapAround: true,
 				autoPlay: true,
-				resize: false
+				resize: false,
 			});
 		</script>
-		<script type="text/javascript"> //THREEJS
+		<script type="text/javascript">
+			//THREEJS
 			let scene, camera, renderer, starGeo;
 			const WIDTH = window.innerWidth;
 			const HEIGHT = window.innerHeight;
-			function setUp(){
+			function setUp() {
 				scene = new THREE.Scene();
-				camera = new THREE.PerspectiveCamera(
-					60,
-					WIDTH / HEIGHT,
-					1,
-					1000
-				);
+				camera = new THREE.PerspectiveCamera(60, WIDTH / HEIGHT, 1, 1000);
 				camera.position.z = 1;
 				camera.position.x = Math.PI / 2;
 
@@ -541,13 +753,13 @@
 				renderer.setSize(WIDTH, HEIGHT);
 				document.querySelector(".home-page").appendChild(renderer.domElement);
 			}
-			
+
 			function onWindowResize() {
 				camera.aspect = WIDTH / HEIGHT;
 				camera.updateProjectionMatrix();
 				renderer.setSize(WIDTH, HEIGHT);
 			}
-			Star = function() {
+			Star = function () {
 				starGeo = new THREE.Geometry();
 				for (let i = 0; i < 6000; i++) {
 					star = new THREE.Vector3(
@@ -559,8 +771,8 @@
 					star.acceleration = 0.02;
 					starGeo.vertices.push(star);
 				}
-			}
-			function createStar(){
+			};
+			function createStar() {
 				const star = new Star();
 				let sprite = new THREE.TextureLoader().load("./img/star.png");
 				let starMat = new THREE.PointsMaterial({
@@ -572,7 +784,7 @@
 				stars = new THREE.Points(starGeo, starMat);
 				scene.add(stars);
 			}
-			
+
 			function animate() {
 				starGeo.vertices.forEach((p) => {
 					p.velocity += p.acceleration;
@@ -590,7 +802,7 @@
 
 			const init = () => {
 				setUp();
-				
+
 				createStar();
 
 				window.addEventListener("resize", onWindowResize, false);

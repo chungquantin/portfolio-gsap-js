@@ -16,7 +16,7 @@ $Raleway: "Raleway", sans-serif;
 }
 $mainColor: black;
 body {
-	.nav-bar{
+	.nav-bar {
 		padding: 50px 0px;
 		display: flex;
 		flex-direction: column;
@@ -26,16 +26,16 @@ body {
 		position: fixed;
 		right: 0;
 		z-index: 2000;
-		.icon-area{
-			.icon-container{
+		.icon-area {
+			.icon-container {
 				margin: 0px auto;
 				height: fit-content;
 				width: fit-content;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
-				div{
-					width:42px;
+				div {
+					width: 42px;
 					height: 42px;
 					border-radius: 50px;
 					justify-content: center;
@@ -44,16 +44,16 @@ body {
 					font-size: 20px;
 					background-color: rgb(27, 27, 27);
 					margin: 10px 10px;
-					i{
+					i {
 						opacity: 0.5;
 						margin: 0px auto;
 						mix-blend-mode: difference;
 					}
-					&:hover{
+					&:hover {
 						box-shadow: 0px 0px 15px white;
 						cursor: pointer;
 						background-color: white;
-						i{
+						i {
 							opacity: 1;
 						}
 					}
@@ -67,10 +67,9 @@ body {
 	&::-webkit-scrollbar {
 		display: none;
 	}
-	@media (max-width: 1024px){
+	@media (max-width: 1024px) {
 		overflow: scroll;
 	}
-	
 }
 section {
 	min-height: 100vh;
@@ -200,7 +199,6 @@ section {
 
 .svg-path {
 	path {
-		
 		stroke-dasharray: 5000;
 		stroke-dashoffset: 0;
 		stroke-opacity: 1;
@@ -233,12 +231,11 @@ button {
 		i {
 			mix-blend-mode: difference;
 			font-size: 23px;
-			
 		}
 		width: 78px;
 		height: 78px;
 		background-color: transparent;
-		&:hover{
+		&:hover {
 			background-color: #fff;
 		}
 	}
@@ -278,23 +275,23 @@ canvas {
 }
 //TODO responsiveness refactoring
 
-.contact-form{
+.contact-form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 70%;
 	height: 60%;
 }
-.project-page{
+.project-page {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-.project-display{
+.project-display {
 	background-color: rgba(15, 15, 15, 0.178);
 	padding: 50px;
 	border-radius: 30px;
-	box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192) ;
+	box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192);
 	margin: 10px;
 	width: 1400px;
 	height: 700px;
@@ -304,21 +301,21 @@ canvas {
 	@media (max-width: 1424px) {
 		width: 700px;
 		height: fit-content;
-		grid-template-columns: repeat(2,1fr);
-	grid-template-rows: repeat(4,1fr);
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, 1fr);
 	}
 	@media (max-width: 700px) {
 		width: 100%;
 		height: fit-content;
 	}
-	grid-template-columns: repeat(4,1fr);
-	grid-template-rows: repeat(2,1fr);
-	.project-card{
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	.project-card {
 		background-color: rgb(20, 20, 20);
 		position: relative;
 		overflow: hidden;
-		&:first-child{
-			background-color:transparent;
+		&:first-child {
+			background-color: transparent;
 			grid-row: 1/3;
 			grid-column: 3/5;
 			@media (max-width: 1424px) {
@@ -326,108 +323,107 @@ canvas {
 				grid-column: 1/3;
 			}
 		}
-		.project-image{
+		.project-image {
 			width: 100%;
 			height: 100%;
 			filter: brightness(90%);
 			background-position: center;
 			background-size: cover;
 		}
-		&#fleg{
+		&#fleg {
 			width: 100%;
 			height: 330px;
-			.project-image{
-				background-image: url('../img/fleg.jpg');
+			.project-image {
+				background-image: url("../img/fleg.jpg");
 			}
 			@media (max-width: 1424px) {
 				grid-row: 3/4;
 				grid-column: 0/2;
 			}
 		}
-		&#dakonet{
+		&#dakonet {
 			height: 330px;
-			.project-image{
-				background-position-y: 20px;;
-				background-image: url('../img/dakonet.png');
+			.project-image {
+				background-position-y: 20px;
+				background-image: url("../img/dakonet.png");
 			}
 			@media (max-width: 1424px) {
 				grid-row: 3/4;
 				grid-column: 2/3;
 			}
 		}
-		&#edit{
+		&#edit {
 			grid-column: 1/3;
 			background-color: transparent;
-			.edit-heading{
+			.edit-heading {
 				width: fit-content;
 				margin: 20px auto;
 				font-family: $Raleway;
 				font-size: 40px;
 			}
 		}
-	} 
-	
-	.project-detail{
+	}
+
+	.project-detail {
 		position: absolute;
 		z-index: 3;
 		width: 100%;
 		background-color: rgb(24, 24, 24);
 		padding: 10px;
 		height: fit-content;
-		h2{
+		h2 {
 			font-family: $Raleway;
 			margin: 2px 0px;
 		}
-		p{
+		p {
 			font-family: $Poppins;
 		}
 	}
 }
-.project-heading{
+.project-heading {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	align-items: center;
 	height: 50%;
 	justify-content: center;
-	h1{
+	h1 {
 		text-align: center;
 		margin: 5px auto;
 		font-family: $Raleway;
 		font-size: 68px;
 	}
-	.description{
+	.description {
 		margin: 0px auto;
 		font-family: $Poppins;
 		font-size: 18px;
 	}
 }
 
-
 .carousel-cell {
 	width: 300px;
 	height: 200px;
-	background-color:black;
+	background-color: black;
 	margin: 10px;
 }
-.project-image{
+.project-image {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.action-area{
+.action-area {
 	position: absolute;
 	z-index: 1000;
-	bottom:0;
+	bottom: 0;
 	right: 0;
 	margin: 0px auto;
 	grid-row: auto auto;
-	button{
-		&:first-child{
+	button {
+		&:first-child {
 			margin: 5px 3px 5px 5px;
 		}
-		&:last-child{
+		&:last-child {
 			margin: 5px 3px 5px 5px;
 		}
 		width: 55px;
@@ -437,73 +433,79 @@ canvas {
 	}
 }
 
-
-
 .flickity-prev-next-button {
 	background: none;
-  }
+}
 
-  .about-page{
+.about-page {
+	display: none;
+	flex-direction: column;
 	margin-top: 30px;
-	padding: 100px;
-	@media (max-width: 700px) {
-		padding: 30px;
+	justify-content: center;
+	padding: 0px 50px;
+	.about-container {
+		width: fit-content;
+		height: fit-content;
+		margin: 0px auto;
 	}
-	.profile-intro{
-		display:flex;
+	.profile-intro {
+		display: flex;
 		width: fit-content;
 		margin: 0px auto;
 		@media (max-width: 1024px) {
-		flex-wrap: wrap;
+			flex-wrap: wrap;
 		}
-	.profile-image{
-		margin: 0px 40px 0px 20px;
-		@media (max-width: 1024px) {
-			margin: 20px auto;
-			width: 200px;
-			height: 200px;
-		}
-		width: 400px;
-		height:400px;
-		overflow:hidden;
-		justify-content: center;
-		object-fit: cover;
-		img{
-			width: 100%;
-			
-		}
-	}
-	.profile-content{
-		width: 100%;
-		.profile-greeting{
+		.profile-image {
+			margin: 0px 40px 0px 20px;
+			@media (max-width: 1024px) {
+				margin: 20px auto;
+				width: 200px;
+				height: 200px;
+			}
+			width: 400px;
+			height: 400px;
 			overflow: hidden;
-			padding: 2px;
-			.letters{
-				line-height: 1em;
-				font-family: $Raleway;
-				transform-origin: 0% 100%;
-				font-size: 60px;
-				@media (max-width: 800px) {
-					text-align: center;
-					font-size: 35px;
-				}
+			justify-content: center;
+			object-fit: cover;
+			img {
+				width: 100%;
 			}
 		}
-		.profile-description{
-			margin-top: 25px;
-			max-width: 800px;
-			font-family: $Poppins;
+		.profile-content {
+			width: 100%;
+			.profile-greeting {
+				overflow: hidden;
+				padding: 2px;
+				.letters {
+					line-height: 1em;
+					font-family: $Raleway;
+					transform-origin: 0% 100%;
+					font-size: 60px;
+					@media (max-width: 800px) {
+						text-align: center;
+						font-size: 35px;
+					}
+				}
+			}
+			.profile-description {
+				margin-top: 25px;
+				max-width: 800px;
+				font-family: $Poppins;
+			}
 		}
 	}
-	}
-		
-	.box-container{
+
+	.box-container {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 100px;
-		margin: 50px auto;
+		margin: 20px auto;
+		@media (max-width: 1024px) {
+			margin: 50px auto 0px auto;
+		}
+		margin-bottom: 100px;
 		width: fit-content;
-		.box{
+		.box {
 			position: relative;
 			max-width: 300px;
 			max-height: 400px;
@@ -512,24 +514,24 @@ canvas {
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			box-shadow:0 30px 60px rgba(0,0,0,0.2);
-			.text{
+			box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+			.text {
 				width: 100%;
 				font-family: $Raleway;
 				text-align: center;
 				margin: 30px;
 				font-size: 35px;
-				div{
+				div {
 					margin: 5px 0px;
-					font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+					font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 					font-size: 15px;
 				}
 			}
-			.percent{
+			.percent {
 				position: relative;
 				width: 150px;
 				height: 150px;
-				.number{
+				.number {
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -539,11 +541,11 @@ canvas {
 					flex-direction: column;
 					justify-content: center;
 					align-self: center;
-					h2{
+					h2 {
 						margin: 0px auto;
 						font-family: $Raleway;
-						font-size:40px;
-						span{
+						font-size: 40px;
+						span {
 							font-size: 20px;
 						}
 					}
@@ -552,34 +554,34 @@ canvas {
 					position: relative;
 					max-width: 150px;
 					max-height: 150px;
-					circle{
+					circle {
 						width: 150px;
 						height: 150px;
 						fill: none;
 						stroke-width: 10;
-						transform: translate(5px,5px);
+						transform: translate(5px, 5px);
 						stroke-dasharray: 440;
 						stroke-dashoffset: 440;
 						stroke-linecap: round;
-						&.top-circle{
+						&.top-circle {
 							stroke-dashoffset: 0;
 							stroke: #f3f3f3;
 						}
-						&.bottom-circle{
-							&#ct{
-								stroke:  url("#gradient-ct");
+						&.bottom-circle {
+							&#ct {
+								stroke: url("#gradient-ct");
 								animation: circularProgressing89 4s linear;
-								stroke-dashoffset: 440-(440*89)/100;
+								stroke-dashoffset: 440- (440 * 89)/100;
 							}
-							&#sl{
-								stroke:  url("#gradient-sl");
+							&#sl {
+								stroke: url("#gradient-sl");
 								animation: circularProgressing92 4s linear;
-								stroke-dashoffset: 440-(440*92)/100;
+								stroke-dashoffset: 440- (440 * 92)/100;
 							}
-							&#tw{
-								stroke:url("#gradient-tw");
+							&#tw {
+								stroke: url("#gradient-tw");
 								animation: circularProgressing87 4s linear;
-								stroke-dashoffset: 440-(440*87)/100;
+								stroke-dashoffset: 440- (440 * 87)/100;
 							}
 						}
 					}
@@ -587,72 +589,75 @@ canvas {
 			}
 		}
 	}
-  }
+}
 
-@function percentCalc($total, $percent){
-	$rv : $total - ($total*$percent)/100;
+@function percentCalc($total, $percent) {
+	$rv: $total - ($total * $percent)/100;
 	@return $rv;
 }
-  
-@keyframes circularProgressing89{
-	0%{
-		stroke-dashoffset: percentCalc(440,0);
+
+@keyframes circularProgressing89 {
+	0% {
+		stroke-dashoffset: percentCalc(440, 0);
 	}
-	100%{
-		stroke-dashoffset: percentCalc(440,89);
+	100% {
+		stroke-dashoffset: percentCalc(440, 89);
 	}
 }
 
-@keyframes circularProgressing92{
-	0%{
-		stroke-dashoffset: percentCalc(440,0);
+@keyframes circularProgressing92 {
+	0% {
+		stroke-dashoffset: percentCalc(440, 0);
 	}
-	100%{
-		stroke-dashoffset: percentCalc(440,92);
-	}
-}
-
-@keyframes circularProgressing87{
-	0%{
-		stroke-dashoffset: percentCalc(440,0);
-	}
-	100%{
-		stroke-dashoffset: percentCalc(440,87);
+	100% {
+		stroke-dashoffset: percentCalc(440, 92);
 	}
 }
 
+@keyframes circularProgressing87 {
+	0% {
+		stroke-dashoffset: percentCalc(440, 0);
+	}
+	100% {
+		stroke-dashoffset: percentCalc(440, 87);
+	}
+}
 
-.tech-page{
+.tech-page {
 	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	.tech-dashboard{
+	.tech-dashboard {
 		position: relative;
 		overflow: hidden;
-		.tech-nav{
+		.tech-nav {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			margin: 0px 50px;
-			.tech-button{
+			.tech-button {
 				margin: 10px;
-				font-size: 20px;	
+				font-size: 20px;
 				border-radius: 10px;
 				background: #202020;
-				box-shadow:  20px 20px 60px #121212, 
-							-20px -20px 60px #2e2e2e;
+				box-shadow: 20px 20px 60px #121212, -20px -20px 60px #2e2e2e;
 				padding: 10px 20px;
 				font-family: $Raleway;
-				&.is-selected{
+				&.is-selected {
 					transform: scale(1.1);
-					background: linear-gradient(90deg, rgba(214,152,11,1) 0%, rgba(199,147,27,1) 37%, rgb(255, 227, 141) 100%);
+					background: linear-gradient(
+						90deg,
+						rgba(214, 152, 11, 1) 0%,
+						rgba(199, 147, 27, 1) 37%,
+						rgb(255, 227, 141) 100%
+					);
 					color: rgb(26, 26, 26);
-					&:hover{
+					&:hover {
 						border: unset;
 					}
 				}
-				&:hover{
+				&:hover {
 					border: 2px solid rgb(228, 201, 81);
 				}
 			}
@@ -665,14 +670,14 @@ canvas {
 		background-position: center;
 		background-size: cover;
 		background-color: rgba(0, 0, 0, 0.13);
-		box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192) ;
-		.tech-heading{
+		box-shadow: 2px 2px 100px rgba(138, 138, 138, 0.192);
+		.tech-heading {
 			font-family: $Raleway;
 			width: fit-content;
 			text-align: center;
 			font-size: 50px;
 		}
-		.tech-card{
+		.tech-card {
 			width: 100px;
 			height: 100px;
 			margin: 10px 10px;
@@ -680,13 +685,13 @@ canvas {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
-			img{
+			img {
 				width: 100%;
 				margin: 0px auto;
 			}
-			&:hover{
+			&:hover {
 				position: relative;
-				&::after{
+				&::after {
 					transition: all 0.5s linear;
 					color: white;
 					text-shadow: 2px 2px 10px white;
@@ -698,92 +703,92 @@ canvas {
 					display: flex;
 					text-transform: uppercase;
 					position: absolute;
-					bottom: 0;	
+					bottom: 0;
 				}
-				&#css::after{
+				&#css::after {
 					content: "css";
 				}
-				&#sass::after{
+				&#sass::after {
 					content: "sass";
 				}
-				&#bootstrap::after{
+				&#bootstrap::after {
 					content: "bootstrap";
 				}
-				&#mui::after{
+				&#mui::after {
 					content: "mui";
 				}
-				&#html::after{
+				&#html::after {
 					content: "html";
 				}
-				&#materialize::after{
+				&#materialize::after {
 					content: "materialize";
 				}
-				&#react::after{
+				&#react::after {
 					content: "react";
 				}
-				&#redux::after{
+				&#redux::after {
 					content: "redux";
 				}
-				&#javascript::after{
+				&#javascript::after {
 					content: "javascript";
 				}
-				&#nodejs::after{
+				&#nodejs::after {
 					content: "nodejs";
 				}
-				&#graphql::after{
+				&#graphql::after {
 					content: "graphql";
 				}
-				&#firebase::after{
+				&#firebase::after {
 					content: "firebase";
 				}
-				&#mongodb::after{
+				&#mongodb::after {
 					content: "mongodb";
 				}
-				&#mysql::after{
+				&#mysql::after {
 					content: "mysql";
 				}
-				&#netlify::after{
+				&#netlify::after {
 					content: "netlify";
 				}
-				&#figma::after{
+				&#figma::after {
 					content: "figma";
 				}
-				&#pts::after{
+				&#pts::after {
 					content: "Adobe Photoshop";
 				}
-				&#premiere::after{
+				&#premiere::after {
 					content: "Adobe Premiere";
 				}
 			}
 		}
-		.circle{
+		.circle {
 			background-color: #fff;
 			border-radius: 100px;
 		}
-		.tech-frontend{
+		.tech-frontend {
 			display: flex;
 			flex-direction: column;
-			.container{
+			.container {
 				width: fit-content;
 				margin: 0px auto;
 				display: flex;
 				flex-wrap: wrap;
 			}
 		}
-		.tech-backend{
+		.tech-backend {
 			display: flex;
 			flex-direction: column;
-			.container{
+			.container {
 				width: fit-content;
 				margin: 0px auto;
 				display: flex;
 				flex-wrap: wrap;
 			}
 		}
-		.tech-other{
+		.tech-other {
 			display: flex;
 			flex-direction: column;
-			.container{
+			.container {
 				width: fit-content;
 				margin: 0px auto;
 				display: flex;
